@@ -1,3 +1,4 @@
+require('dotenv/config');
 const express = require('express');
 const app =express();
 const morgan =require('morgan');
@@ -5,7 +6,7 @@ const mongoose =require('mongoose');
 const cors = require("cors");
 const authJwt = require("./helpers/jwt");
 const errorHandler = require("./helpers/error-handler");
-require('dotenv/config');
+
 
 app.use(cors());
 app.options("*", cors());
