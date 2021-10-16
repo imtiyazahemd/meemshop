@@ -57,10 +57,10 @@ app.use(`${api}/basket`, baskketRoutes);
 
 console.log('db done11')
 //Database
-mongoose.connect(process.env.CONNECTION_STRING,{
+mongoose.connect('mongodb+srv://admin:Admin@123@cluster0.y6afi.mongodb.net/eshop-database?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    dbName:process.env.DB_NAME
+    dbName:'eshop-database'
 }).then(()=>{
     console.log('db done')
 }).catch((err)=>{
@@ -69,7 +69,7 @@ mongoose.connect(process.env.CONNECTION_STRING,{
     console.log('db err')
 }); 
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000 || 3000;
 //Server
 app.listen(PORT,()=>{
     console.log(api);
