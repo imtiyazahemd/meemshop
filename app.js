@@ -44,7 +44,7 @@ const usersRoutes = require("./routes/users");
 const ordersRoutes = require("./routes/orders");
 const baskketRoutes = require("./routes/basket");
 
-const api=process.env.API_URL;
+const api='/api/v1';
 
 app.use(`${api}/categories`, categoriesRoutes);
 app.use(`${api}/subcategory`, subcategoiesRoutes);
